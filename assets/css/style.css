@@ -103,4 +103,7 @@ a:hover:before {
         font-size: 14px;
         margin-bottom: 0.5rem;
     }
+    p, span, a, p a {
+        font-size: 10px;
+    }
 }
