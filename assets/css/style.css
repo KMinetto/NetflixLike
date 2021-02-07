@@ -1,3 +1,4 @@
+/* HTML Elements */
 body {
     width: 100%;
     height: 100vh;
@@ -16,6 +17,20 @@ ul {
 
 ul li {
     font-size: 16px;
+}
+
+p, p a {
+    font-size: 12px;
+}
+
+p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p a:hover {
+    text-decoration: none;
+    color: #fff;
 }
 
 a {
@@ -43,6 +58,22 @@ a:hover:before {
     transform: scale(1);
 }
 
+/* Classes */
+.shadow {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.red-btn {
+    background-color: #E50914;
+    transition: all 0.4s;
+}
+
+.red-btn:hover {
+    background-color: #92060e;
+}
+
+/* Id's */
+
 #index:hover:before {
     visibility: hidden;
     -webkit-transform: scale(0);
@@ -52,5 +83,24 @@ a:hover:before {
 @media (max-width: 576px) {
     a:hover:before {
         visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .alert li {
+        font-size: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 10px;
+    }
+    button {
+    font-size: 10px;
+    }
+    h1 {
+        font-size: 14px;
+        margin-bottom: 0.5rem;
     }
 }
