@@ -28,7 +28,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <header>
             <nav class="d-flex justify-content-between">
                 <div class="col-2">
-                    <a id="index" href="index.php"><img src="assets/img/logo_netflix_like.svg" alt="Logo Netflix Like"></a>
+                    <a id="index" href="index.php"><img src="assets/img/Flixnet_logo.svg" alt="Logo Netflix Like"></a>
                 </div>
                 <div>
                     <ul class="list-inline">
