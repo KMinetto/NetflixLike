@@ -3,6 +3,7 @@
 $title = "Connexion";
 require_once "assets/php/require/header.php";
 
+reconnectCookie();
 if (!empty($_SESSION['auth'])) {
     header('location: index.php');
 }
