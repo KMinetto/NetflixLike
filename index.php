@@ -36,6 +36,8 @@ require_once 'assets/php/require/header.php';
     </div>
 <?php endif; ?>
 
+<!-- TODO: Faire un carousel de films -->
+
 <?php
 require_once 'assets/php/require/footer.php';
 ?>
