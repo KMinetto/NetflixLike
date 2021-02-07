@@ -1,9 +1,10 @@
 /* HTML Elements */
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     padding-top: 20px;
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/pages/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -72,6 +73,26 @@ a:hover:before {
     background-color: #92060e;
 }
 
+#glider-container {
+    padding: 100px;
+}
+
+/** Glider **/
+
+figure img {
+    padding: .5em;
+}
+
+.figure {
+    display: block;
+    margin: 1.5em;
+    padding: .7em;
+}
+
+.glider-next, .glider-prev {
+    top: 50%;
+}
+
 /* Id's */
 
 #index:hover:before {
@@ -79,6 +100,8 @@ a:hover:before {
     -webkit-transform: scale(0);
     transform: scale(0);
 }
+
+/* Media querries */
 
 @media (max-width: 576px) {
     a:hover:before {
@@ -97,7 +120,7 @@ a:hover:before {
         font-size: 10px;
     }
     button {
-    font-size: 10px;
+        font-size: 10px;
     }
     h1 {
         font-size: 14px;
@@ -105,5 +128,11 @@ a:hover:before {
     }
     p, span, a, p a {
         font-size: 10px;
+    }
+    .glider-next {
+        right: 0;
+    }
+    .glider-prev {
+        left: 0;
     }
 }
