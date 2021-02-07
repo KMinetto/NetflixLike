@@ -6,7 +6,7 @@ require_once 'assets/php/require/header.php';
 ?>
 
 <?php if (!empty($_SESSION)) : ?>
-    <div class="col-12 col-md-4 position-absolute top-50 start-50 translate-middle p-2 shadow">
+    <div class="col-12 mt-5 p-2 shadow">
         <div class="container">
             <div class="row">
                 <?php if (isset($_SESSION['flash'])) : ?>
@@ -28,15 +28,44 @@ require_once 'assets/php/require/header.php';
                 <?php endif ?>
 
                 <?php if (isset($_SESSION['auth'])) : ?>
-                    <h1 class="text-white">Bonjour <?= $_SESSION['auth']->pseudo ?></h1>
-                    <p class="text-white">Qu'allez-vous regarder aujourd'hui ?</p>
+                    <h1 class="text-white text-center">Bonjour <?= $_SESSION['auth']->pseudo ?></h1>
+                    <p class="text-white text-center">Qu'allez-vous regarder aujourd'hui ?</p>
                 <?php endif; ?>
             </div>
         </div>
     </div>
 <?php endif; ?>
+    <?php
+        $sql = 'SELECT count(id) as nb_films FROM movies';
+        $req = $pdo->prepare($sql);
+        $req->execute();
+        $nb_film = $req->fetch();
+    ?>
 
-<!-- TODO: Faire un carousel de films -->
+
+    <div id="glider-container" class="glider-contain multiple">
+        <h1 class="text-white text-center">Nos films</h1>
+        <button class="glider-prev">
+            <i class="fa fa-chevron-circle-left"></i>
+        </button>
+        <div id="glider" class="glider">
+            <?php for ($i = 1; $i < $nb_film->nb_films; $i++) : ?>
+                <?php
+                    $sql = 'SELECT * FROM movies WHERE id = :id';
+                    $req2 = $pdo->prepare($sql);
+                    $req2->execute([":id" => $i]);
+                    $movie = $req2->fetch();
+                ?>
+                <figure>
+                    <img src="assets/img/movies/<?= $movie->img ?>" alt="Affiche de film">
+                </figure>
+            <?php endfor; ?>
+        </div>
+        <button class="glider-next">
+            <i class="fa fa-chevron-circle-right"></i>
+        </button>
+        <div id="dots" class="glider-dots"></div>
+    </div>
 
 <?php
 require_once 'assets/php/require/footer.php';
