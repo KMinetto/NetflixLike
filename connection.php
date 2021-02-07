@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <div class="row">
             <form class="mb-3" action="" method="post">
-                <h1 class="text-white mb-5">Se connecter</h1>
+                <h1 class="text-white">Se connecter</h1>
                 <?php if (isset($_SESSION['flash'])) : ?>
                     <?php if (isset($_SESSION['flash']['errors'])) :?>
                         <ul class="alert alert-danger">
