@@ -1,12 +1,11 @@
 // Glider
 
 new Glider(document.querySelector('.glider'), {
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     scrollLock: true,
     draggable: true,
     rewind: true,
-    dots: '#dots',
     arrows: {
         prev: '.prev',
         next: '.next'
@@ -59,4 +58,4 @@ function sliderAuto(slider, miliseconds) {
     slide();
 }
 
-sliderAuto(glider, 3000);
+sliderAuto(glider, 5000);
