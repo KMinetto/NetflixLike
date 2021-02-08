@@ -56,9 +56,11 @@ require_once 'assets/php/require/header.php';
                     $req2->execute([":id" => $i]);
                     $movie = $req2->fetch();
                 ?>
-                <figure>
-                    <img src="assets/img/movies/<?= $movie->img ?>" alt="Affiche de film">
-                </figure>
+                <a href="movie.php?id=<?= $movie->id ?>">
+                    <figure>
+                        <img src="assets/img/movies/<?= $movie->img ?>" alt="Affiche de film">
+                    </figure>
+                </a>
             <?php endfor; ?>
         </div>
         <button class="glider-next">

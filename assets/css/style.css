@@ -59,6 +59,10 @@ a:hover:before {
     transform: scale(1);
 }
 
+textarea {
+    border-radius: 10px;
+}
+
 /* Classes */
 .shadow {
     background-color: rgba(0, 0, 0, 0.7);
@@ -73,14 +77,27 @@ a:hover:before {
     background-color: #92060e;
 }
 
-#glider-container {
-    padding: 100px;
+.title {
+    font-size: 32px;
+}
+
+.comments {
+    background-color: #0E1C36;
+    border-radius: 10px;
+}
+
+.comment-content {
+    font-size: 16px;
 }
 
 /** Glider **/
 
 figure img {
     padding: .5em;
+}
+
+.glider a:hover:before {
+    visibility: hidden;
 }
 
 .figure {
@@ -91,6 +108,10 @@ figure img {
 
 .glider-next, .glider-prev {
     top: 50%;
+}
+
+#glider-container {
+    padding: 100px;
 }
 
 /* Id's */
