@@ -38,7 +38,8 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div>
                     <ul class="list-inline">
                         <?php if (!empty($_SESSION['auth'])) : ?>
-                            <li class="nav-item"><a href="logout.php" class="nav-link text-white">Se déconnecter</a></li>
+                            <li class="nav-item list-inline-item"><a href="addmovie.php" class="nav-link text-white">Mes films</a></li>
+                            <li class="nav-item list-inline-item"><a href="logout.php" class="nav-link text-white">Se déconnecter</a></li>
                         <?php else : ?>
                             <li class="nav-item list-inline-item"><a class="nav-link text-white active" href="inscription.php">Inscription</a></li>
                             <li class="nav-item list-inline-item"><a class="nav-link text-white" href="connection.php">Connexion</a></li>
