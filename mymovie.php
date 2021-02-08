@@ -5,9 +5,9 @@
         header('Location: index.php');
     }
 
-    $sql = 'SELECT * FROM movies, users WHERE id_user = users.id';
+    $sql = 'SELECT * FROM movies, users WHERE id_user = users.id AND users.id = :id';
     $req = $pdo->prepare($sql);
-    $req->execute();
+    $req->execute([":id" => $_SESSION['auth']->id]);
     $movies = $req->fetchAll();
 ?>
 
