@@ -857,50 +857,55 @@ SELECT|sys.sys_config
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;default.png&apos;</DefaultExpression>
     </column>
-    <key id="257" parent="235" name="PRIMARY">
+    <column id="257" parent="235" name="id_user">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <key id="258" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="258" parent="236" name="id">
+    <column id="259" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="259" parent="236" name="pseudo">
+    <column id="260" parent="236" name="pseudo">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="260" parent="236" name="email">
+    <column id="261" parent="236" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="261" parent="236" name="password">
+    <column id="262" parent="236" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="262" parent="236" name="confirmation_token">
+    <column id="263" parent="236" name="confirmation_token">
       <Position>5</Position>
       <DataType>varchar(60)|0s</DataType>
     </column>
-    <column id="263" parent="236" name="created_at">
+    <column id="264" parent="236" name="created_at">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="264" parent="236" name="confirmed_at">
+    <column id="265" parent="236" name="confirmed_at">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="265" parent="236" name="cookie_token">
+    <column id="266" parent="236" name="cookie_token">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="266" parent="236" name="PRIMARY">
+    <key id="267" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
