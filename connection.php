@@ -18,8 +18,6 @@ if (isset($_POST['submit'])) {
         $req->execute([":pseudo" => $pseudo]);
         $user = $req->fetch();
 
-        var_dump($user);
-
         if (password_verify($password, $user->password)) {
             $_SESSION['auth'] = $user;
             $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté. Bon visionnage !';
