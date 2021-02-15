@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=https://kilianm.promo-45.codeur.online/adminer;dbname=kilianm_netflix_like;charset=utf8";
+$dsn = "mysql:host=localhost;dbname=netflix_like;charset=utf8";
 $user = 'kilianm';
 $password = 'oUH50e5S1CD+vg==';
 $options = array(
