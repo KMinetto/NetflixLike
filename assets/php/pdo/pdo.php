@@ -1,8 +1,8 @@
 <?php
 
 $dsn = "mysql:host=localhost;dbname=netflix_like;charset=utf8";
-$user = 'kilianm';
-$password = 'oUH50e5S1CD+vg==';
+$user = 'root';
+$password = '';
 $options = array(
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8;",
