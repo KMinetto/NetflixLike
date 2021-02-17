@@ -3,11 +3,16 @@
 $title = 'Modifier un film';
 require_once "assets/php/require/header.php";
 
-if (empty($_SESSION['auth'])) {
-    header('Location: index.php');
-}
-
 $title = htmlspecialchars($_GET['title']);
+$gender = htmlspecialchars($_GET['gender']);
+$img = htmlspecialchars($_GET['img']);
+$synopsis = htmlspecialchars($_GET['synopsis']);
+$id_user = htmlspecialchars($_GET['id_user']);
+
+if (empty($_SESSION['auth']) || $_SESSION['auth']->id !== $id_user ) {
+    header('Location: index.php');
+    exit();
+}
 
 $sql = 'SELECT * FROM movies WHERE title = :title';
 $req = $pdo->prepare($sql);

@@ -47,7 +47,7 @@
                 <h2>Modifier</h2>
             </figcaption>
             <a href="modifyMovie.php?title=<?= $movie->title ?>&gender=<?= $movie->gender ?>&synopsis=<?= $movie->synopsis ?>
-                &img=<?= $movie->img ?>"></a>
+                &img=<?= $movie->img ?>id_user=<?= $movie->user_id ?>"></a>
         </figure>
 <!--    </div>-->
 <?php endforeach; ?>
