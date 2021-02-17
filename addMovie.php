@@ -3,6 +3,11 @@
     $title = "Ajouter un film";
     require_once "assets/php/require/header.php";
 
+    if (empty($_SESSION['auth'])) {
+        header('Location: index.php');
+        exit();
+    }
+
     $localisation = '';
     if (isset($_POST['submit'])) {
         if (isset($_FILES['file']) && $_FILES['file']['error'] === 0 && $_FILES['file']['size'] <= 3_000_000) {
@@ -16,7 +21,7 @@
             ];
 
             if (in_array($extension, $arrayExtension, true)) {
-                $localisation = time() . mt_rand() . '.' .$extension;
+                $localisation = $_POST['title'] . '.' .$extension;
                 $uploads = move_uploaded_file($_FILES['file']['tmp_name'], 'assets/img/movies/'. $localisation);
             } else {
                 $_SESSION['flash']['errors'] = 'L\'image n\'a pas une bonne extension, Vérifiez que ce soit un .png ou un .jpg';
@@ -74,7 +79,7 @@
                         <?php endif; ?>
                     <?php endif ?>
                     <div class="col-12 mb-4">
-                        <input type="file" name="file" id="file">
+                        <input class="text-white" type="file" name="file" id="file">
                     </div>
                     <div class="col-12 mb-4">
                         <input type="text" name="title" class="form-control" placeholder="Titre du film">
